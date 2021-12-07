@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GeoAR.js Ennio demo</title>
+
+    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
+      <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+            <script src="jquery-3.6.0.min.js" ></script>
+
+
+    <script>
+        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+    </script>
+
+    <style>
+
+
+    </style>
+</head>
+
+
+<body style='margin: 0; overflow: hidden;'>
+
+    <a-scene
+    id="scena1"
+        vr-mode-ui="enabled: false"
+          embedded
+        arjs='
+              sourceType: webcam;
+              sourceWidth:1280;
+              sourceHeight:960;
+              displayWidth: 1280;
+              displayHeight: 960;
+              debugUIEnabled: false;'>
+
+
+        <a-entity
+          link="href: https://ar-js-org.github.io/studio/"
+          href: "https://ar-js-org.github.io/studio/"
+          gltf-model="./magnemite/fox_rigged/scene.gltf"
+          gps-entity-place="longitude: 45.848561; latitude: 7.734035; altitude:1597"
+        />
+
+
+                <a-entity
+                  link="href: https://jquery.com/download/"
+                  href: "https://jquery.com/download/"
+                  gltf-model="./magnemite/werewolf_rigged/scene.gltf"
+                  gps-entity-place="longitude: 45.848525; latitude: 7.734114; altitude:1597"
+                />
+
+
+                        <a-entity
+                          link="href: https://aframe.io/docs/0.9.0/introduction/#off-you-go"
+                          href: "https://aframe.io/docs/0.9.0/introduction/#off-you-go"
+                          gltf-model="./magnemite/shark/scene.gltf"
+                          gps-entity-place="longitude: 45.846696; latitude: 7.732996; altitude:1594"
+                        />
+
+
+                                <a-entity
+                                  link="href: https://www.w3schools.com/jsref/met_win_open.asp"
+                                  href: "https://www.w3schools.com/jsref/met_win_open.asp"
+                                  gltf-model="./magnemite/cat_murdered_soul_suspect/scene.gltf"
+                                  gps-entity-place="longitude: 45.843606; latitude: 7.732104; altitude:1582"
+                                />
+
+
+
+                                              <a-entity
+                                                link="href: https://www.w3schools.com/css/css3_animations.asp"
+                                                href: "https://www.w3schools.com/css/css3_animations.asp"
+                                                gltf-model="./magnemite/wolf_riged/scene.gltf"
+                                                gps-entity-place="longitude: 45.847653; latitude: 7.734667; altitude:1582"
+                                              />
+
+
+        <a-camera
+          positionMinAccuracy="10"
+          alert="true"
+          gps-camera rotation-reader
+          gpsMinDistance=0.5
+          maxDistance=10
+          minDistance=1
+        ></a-camera>
+
+       </a-scene>
+
+
+
+
+
+<script>
+  </script>
+
+</body>
